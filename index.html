@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bible Compare</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <div class="content">
+          <h1>BIBLE</h1>
+          <h2>Find scriptures in 6 different languages. <br />
+            Compare biblical passages in different <br />
+              english versions.<br />
+            Find your favorite song lyrics.</h2>
+          <button id="button-header" onclick="letsGo()" >LET's GO</button>
+        </div>
+      </div>
+    </header>
+
+      
+      <section>
+        <!-- Main -->  
+        <h3>Passage Search</h3>
+        <div class="box0">
+            <form>
+                <label for="translation0">Choose the language:</label>
+                    <select id="translation0">
+                        <option value="eo-zamenbib">La Sankta Biblio (Esperanto)</option>
+                        <option value="KJV1900">King James Version (English)</option>
+                        <option value="FI-RAAMATTU">Raamattu (Finnish)</option>
+                        <option value="RVR60">Reina Valera 1960 (Spanish)</option>
+                        <option value="bb-sbb-rusbt">Russian Synodal Bible Translation (Russian)</option>
+                        <option value="SVV">Statenvertaling (Dutch)</option>
+                    </select>
+                <label for="search0">Bible Passage: 
+                    <input id="search0" type="text" placeholder="Ex. Psalms 121:1"></label>
+            </form>
+                <button id="button0">SEARCH</button>
+                <p id="error0"></p>
+                <div id="result0">
+                    <div class="loading"></div>
+                    <span id="ref0"></span>  
+                    <p id="script0"></p>                             
+                </div>            
+        </div>
+      </section>
+
+      <section>
+        <h3>Compare Bible Passages</h3>
+          <button id="button1">COMPARE</button>
+          <div class="loader1"></div></div>
+          <div class="box1">
+            <form>
+                <label for="translation1">Choose a version of the Bible:</label>
+                    <select id="translation1">
+                        <option value="asv">American Standard Version</option>
+                        <option value="emphbbl">The Emphasized Bible</option>
+                        <option value="kjv">King James Version</option>
+                        <option value="leb">The Lexham English Bible</option>
+                        <option value="ylt">Young's Literal Translation</option>
+                        <option value="darby">Darby Bible</option>
+                    </select>
+                <label for="search1">Bible passage you want to compare: 
+                    <input id="search1" type="text" placeholder="Ex. John 3:16"></label>   
+            </form>    
+                <p id="error1"></p>
+                <div id="result1">
+                    <div id="loading"></div>
+                    <span id="ref1"></span> 
+                    <p id="script1"></p>                 
+                </div>
+                <div id="stats1">
+                    <p><span id="words1"></span> words.</p>
+                    <p><span id="chars1"></span> characters.</p>
+                </div>
+          </div>
+
+          <div class="box2">
+            <form>
+                <label for="translation2">Choose a version of the Bible:</label>
+                    <select id="translation2">
+                        <option value="asv">American Standard Version</option>
+                        <option value="emphbbl">The Emphasized Bible</option>
+                        <option value="kjv">King James Version</option>
+                        <option value="leb">The Lexham English Bible</option>
+                        <option value="ylt">Young's Literal Translation</option>
+                        <option value="darby">Darby Bible</option>
+                    </select>
+                <label for="search2">Bible passage you want to compare: 
+                    <input id="search2" type="text" placeholder="Ex. John 3:16"></label>
+            </form>
+                <p id="error2"></p>
+                <div id="result2">
+                    <div id="loading"></div>
+                    <span id="ref2"></span> 
+                    <p id="script2"></p>                 
+                </div>
+                <div id="stats2">
+                    <p><span id="words2"></span> words.</p>
+                    <p><span id="chars2"></span> characters.</p>
+                </div>
+            </div>
+        </section> 
+        
+        <section>
+            <!-- Main -->  
+            <h3>Find your favorite song lyrics</h3>
+            <div class="box3">
+                <form action="#" class="js-search-form">
+                  <fieldset name= "lyric-search">
+                    <legend> What song do you want to look up? </legend>
+                    <label for="query-artist">  Artist:  
+                    <input type="text" class="js-query-artist" placeholder="Hillsong" id="query-artist" required></label></br>
+                    <label for="query-title">  Song title:  
+                    <input type="text" class="js-query-title" placeholder="What a beautiful name" id="query-title" required></label>
+                  </fieldset>
+                    <button type="submit">SEARCH</button>
+                </form>
+        
+                <section class="hidden" id="results3"></section>
+            </div>
+        
+    <script src="main.js"></script>
+
+</body>
+</html>
+
+    
